@@ -74,13 +74,11 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => '',
-	'password' => '',
-	'database' => '',
+	'hostname' => '35.196.111.204',
+	'username' => 'root',
+	'password' => 'brickbois',
+	'database' => 'test',
 	'dbdriver' => 'mysqli',
-	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
 	'cache_on' => FALSE,
@@ -92,5 +90,6 @@ $db['default'] = array(
 	'compress' => FALSE,
 	'stricton' => FALSE,
 	'failover' => array(),
-	'save_queries' => TRUE
+	'save_queries' => TRUE,
+	'socket' => '/cloudsql/brickcoin-193416:us-east1:brickcoindb'
 );
