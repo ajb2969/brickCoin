@@ -3,8 +3,7 @@
 index.php
 */
 ?>
-<div class="container" >
-	<!-- Intro -->
+<!-- Intro -->
 	<nav class="navbar navbar-expand-lg navbar-dark special-color">
 	<div class="container">
     <a class="navbar-brand" href="#">BrickCoin</a>
@@ -22,6 +21,8 @@ index.php
     </div>
 	</div>
 	</nav>
+<div class="container" >
+	
     <div class="row space" style="padding-top:7.5%;">
 <!--
 			<div class="col">
@@ -48,7 +49,7 @@ index.php
 				<h2>Get rid of paper recipts and get ready for secure transactions.</h2>
 				<br/>
 				<p>
-                    Our blockchain application scrapes transactions every 60 seconds. Allowing for secure transaction validation, and permanent digital receipt storage. Meaning more paper in your pocket and less in a landfill.</p>
+                    Our Blockchain application scrapes transactions every 60 seconds. Allowing for secure transaction validation, and permanent digital receipt storage. Meaning more paper in your pocket and less in a landfill.</p>
 			</div>
             <div class="col-2"></div>
 			<div class="col-5">
@@ -65,17 +66,17 @@ index.php
 				<h2>Peer-to-Peer transactions between users.</h2>
 				<br/>
 				<p>
-                    The current university currency does not allow for trading between users. This is solved by Brick Coin's easy to access, flexible user interface that allows an individuals wallet to be discovered by other users using a readable username rather than a 42 digit alphanumeric walletID.
+                    The current university currency does not allow for trading between users. This is solved by BrickCoin's easy to access, flexible user interface that allows an individuals wallet to be discovered by other users using a readable username rather than a 42 digit alphanumeric walletID.
                 </p>
 			</div>
 		</div>
         <hr/>
-		<div class="row" style="padding-top:7.5%; padding-bottom: 2em;">
+		<div class="row" style="padding-top:7.5%; padding-bottom: 4em;">
 			<div class="col-5">
 				<h2>Low operating cost for users. Passive revenue for distributer.</h2>
 				<br/>
 				<p>
-                    Each Brick Coin transaction operates with a fee of $0.005 for a transaction of any size. If you trade $1 or $100 dollars you'll always pay half a penny. This low cost fee wouldn't be noticable to the average user and allows the university to stockpile Brick Coin for future events such as raffles or giveaways.
+                    Each BrickCoin transaction operates with a fee of $0.005 for a transaction of any size. If you trade $1 or $100 dollars you'll always pay half a penny. This low cost fee wouldn't be noticable to the average user and allows the university to stockpile BrickCoin for future events such as raffles or giveaways.
                </p>
 			</div>
             <div class="col-2"></div>

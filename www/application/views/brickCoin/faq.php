@@ -3,22 +3,16 @@
 <div class="container">
 <div class="row faqFirst">
 	<h3>What is BrickCoin?</h3>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id ex vestibulum, euismod mauris quis, sodales ipsum. Morbi maximus, quam non efficitur fermentum, nulla ligula efficitur purus, id consectetur risus lorem at lacus. Donec orci sapien, tempor nec dignissim et, rhoncus eget nulla. Nunc commodo mi purus, a rutrum ipsum condimentum eget. Quisque in felis non sem blandit pulvinar a nec sem. Fusce eget lacinia ante.</p>
+	<p>BrickCoin is an alternative currency similar to Tiger Bucks at RIT with more functionality such as person-to-person trading and permanent digital receipts. Unlike typical cryptocurrencies, BrickCoin utilizes the Blockchain without having to worry about a fluctuating value. </p>
 </div>
 <div class="row faq">
-	<h3>What is BrickCoin?</h3>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id ex vestibulum, euismod mauris quis, sodales ipsum. Morbi maximus, quam non efficitur fermentum, nulla ligula efficitur purus, id consectetur risus lorem at lacus. Donec orci sapien, tempor nec dignissim et, rhoncus eget nulla. Nunc commodo mi purus, a rutrum ipsum condimentum eget. Quisque in felis non sem blandit pulvinar a nec sem. Fusce eget lacinia ante.</p>
+	<h3>How does it work?</h3>
+	<p>Our Blockchain application, BrickChain, scrapes for transactions every minute and adds them to the chain. These transactions are immutable meaning transactions cannot be changed once they are processed and you will always have a digital receipt. With this in place we created an interface that allows users to trade and use BrickCoin with the power of BrickChain behind it. </p>
 </div>
 <div class="row faq">
-	<h3>What is BrickCoin?</h3>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id ex vestibulum, euismod mauris quis, sodales ipsum. Morbi maximus, quam non efficitur fermentum, nulla ligula efficitur purus, id consectetur risus lorem at lacus. Donec orci sapien, tempor nec dignissim et, rhoncus eget nulla. Nunc commodo mi purus, a rutrum ipsum condimentum eget. Quisque in felis non sem blandit pulvinar a nec sem. Fusce eget lacinia ante.</p>
+	<h3>Why should I care?</h3>
+	<p>
+		As Blockchain applications become more commonplace, it will be useful to have experience with them as a user as well as a developer. If the potential applications and convenience of Blockchains are not convincing enough, BrickCoin puts more power in the hands of the individual by allowing users to trade with each other. Coupled with a permanent record of transactions, it has more applicable uses than the current on-campus currency.
+	</p>
 </div>
-<div class="row faq">
-	<h3>What is BrickCoin?</h3>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id ex vestibulum, euismod mauris quis, sodales ipsum. Morbi maximus, quam non efficitur fermentum, nulla ligula efficitur purus, id consectetur risus lorem at lacus. Donec orci sapien, tempor nec dignissim et, rhoncus eget nulla. Nunc commodo mi purus, a rutrum ipsum condimentum eget. Quisque in felis non sem blandit pulvinar a nec sem. Fusce eget lacinia ante.</p>
-</div>
-<div class="row faq">
-	<h3>What is BrickCoin?</h3>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id ex vestibulum, euismod mauris quis, sodales ipsum. Morbi maximus, quam non efficitur fermentum, nulla ligula efficitur purus, id consectetur risus lorem at lacus. Donec orci sapien, tempor nec dignissim et, rhoncus eget nulla. Nunc commodo mi purus, a rutrum ipsum condimentum eget. Quisque in felis non sem blandit pulvinar a nec sem. Fusce eget lacinia ante.</p>
-</div>
-</div>
+</div>	

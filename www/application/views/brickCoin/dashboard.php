@@ -48,7 +48,7 @@
 			        <h4 class="card-title"><strong>BrickCoin Update</strong></h4>
 			        <h5 class="indigo-text"><strong>1.28.18</strong></h5>
 
-			        <p class="card-text">It's 4am and we're still going weak. Kev Dev realized his github was never set up correctly. 
+			        <p class="card-text">It's 4am and we're still going strong. Kev Dev realized his github was never set up correctly. 
 			        </p> 
 
 			    </div>
