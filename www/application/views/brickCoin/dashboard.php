@@ -69,8 +69,7 @@
 			<div class="row">
 				<div style="width: 50px;"></div>
 				<div class="col">
-					<div style="margin-top:1em; width: 300px; height: 300px; background-color: black;">
-					</div>
+					<img src="https://api.qrserver.com/v1/create-qr-code/?data=<?php echo $user['walletID']; ?>&amp;size=300x300" alt="" title="" />
 				</div>
 			</div>
 			<div class="row">
