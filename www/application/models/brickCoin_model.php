@@ -76,7 +76,6 @@ class brickCoin_model extends CI_Model {
                 'comment' => ""
             );
             $this->db->insert('transaction',$insert);
-            return "done";
         }
 
 

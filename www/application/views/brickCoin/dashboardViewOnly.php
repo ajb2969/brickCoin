@@ -1,36 +1,7 @@
 <?php
 	$user = $user[0];
 ?>
-
-<nav class="navbar navbar-expand-lg navbar-dark special-color">
-	<div class="container">
-    <a class="navbar-brand" href="#">BrickCoin</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Dashboard<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Team</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">FAQ</a>
-            </li>
-        </ul>
-        <span class="navbar-text white-text">
-            Welcome, <span><?php echo $user['username']?>. &emsp; Wallet: $<span id="updateAmount"><?php echo number_format($user['amount'],2); ?></span></span>
-        </span>
-    </div>
-	</div>
-</nav>
-
-
-<div class="container dashboardSpace card" id="dashboardView">
-	<div class="row">
+<div class="row">
 		<div class="col-3">
 			<div class="card card-cascade wider reverse my-4">
 			    <!--Card image-->
@@ -59,7 +30,7 @@
 		<div class="col">
 			<div class="row">
 				<div class="col">
-				 <h2>Balance: $<?php echo number_format($user['amount'],2); ?></h2>
+				 <h2>Balance: $<span id="userBalance"><?php echo number_format($user['amount'],2); ?></span></h2>
 				</div>
 				<div class="col-8"><h2>Last Transaction: - Filler Text -</h2></div>
 			</div>
@@ -81,7 +52,3 @@
 			</div>
 		</div>
 	</div>
-
-
-
-</div>

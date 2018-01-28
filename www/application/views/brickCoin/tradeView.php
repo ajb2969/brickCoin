@@ -31,12 +31,13 @@
 		    <div class="text-center">
 		    	<?php
 		    	echo "<button class='btn btn-default' onclick='checkSend(" . json_encode($curr[0]). ")'>Send</button>";
+		    	echo "<button class='btn btn-danger' onclick='cancel()'>Cancel</button>";
 		    	?>
 		        
 		    </div>
 		</div>
 	</div>
-	<div class="col-4">
+	<div class="col-5">
 		<h3>Recipient</h3>
 		<hr/>
 		<p>To: <span id="toRecip"></span> &emsp; Phone: <span id="phoneRecip"></span></p>

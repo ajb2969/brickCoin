@@ -58,8 +58,17 @@ class brickCoin extends CI_Controller {
 		//get alll from the user table
 	}
 
+	public function reloadDashboard($wallet){
+		$userData['user'] = $this->brickCoin_model->getUserData($wallet);
+		$this->load->view('brickCoin/dashboardViewOnly.php',$userData);
+	}
+
 	public function sendTransaction(){
 		$post = $this->input->post();
-		echo $this->brickCoin_model->sendTransaction($post);
+		$this->brickCoin_model->sendTransaction($post);
+		//transaction completed. send back to og view.
+		$view['info'] = $this->brickCoin_model->getUserData($post['from']);
+		$view['view'] = $this->reloadDashboard($post['from']);
+		return $view;
 	}
 }

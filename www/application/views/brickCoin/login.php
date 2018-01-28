@@ -4,7 +4,7 @@
 		<div class="col"></div>
 		<div class="col-6">
 			<!-- Could be a card -->
-<div class="form">
+<div class="form card">
     <p class="h5 text-center mb-4">Sign in</p>
 
     <div class="md-form">

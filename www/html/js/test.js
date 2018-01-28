@@ -1,12 +1,5 @@
 console.log("this is a test");
-
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
+var currviewBefore;
 
 function login(){
 	//get login information
@@ -42,7 +35,7 @@ function getUrlVars() {
 
 
 function trade(){
-	var currView = $('#dashboardView').html();
+	currviewBefore = $('#dashboardView').html();
 	$('#dashboardView').fadeOut(200);
 	var vars = getUrlVars();
 	$.ajax({
@@ -54,6 +47,14 @@ function trade(){
 			$('#dashboardView').fadeIn(200);
 		}
 	});
+}
+
+function cancel(){
+	$('#dashboardView').fadeOut(200);
+	setTimeout(function(){
+		$('#dashboardView').html(currviewBefore);
+	},200);
+	$('#dashboardView').fadeIn(200);
 }
 
 function populateRecip(user){
@@ -95,6 +96,7 @@ function checkSend(user){
 	else{
 		//user is the curr user.
 		console.log($('#walletRecip').html());
+		$('#dashboardView').fadeOut(200);
 		$.ajax({
 			'type': 'POST',
 			'url': 'sendTransaction',
@@ -104,7 +106,9 @@ function checkSend(user){
 				'amount' : $('#amount').val()
 			},
 			success : function(data){
-				console.log(data);
+				$('#dashboardView').html(data);
+				$('#updateAmount').html($('#userBalance').html());
+				$('#dashboardView').fadeIn(200);
 			}
 		});
 	}
