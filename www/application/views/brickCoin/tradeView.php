@@ -1,11 +1,11 @@
 <h2>Trading</h2>
 <hr/>
+<div class="container">
 <div class="row">
 	<div class="col">
 	<!-- Form -->
 		<div class="form">
 		    <h2 class="text-center">Trading</h2>
-
 		    <div class="md-form">
 		        <div class="btn-group">
     	<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Recipient</button>
@@ -44,4 +44,5 @@
 		<p><code>walletID: <span id="walletRecip"></span></code></p>
 		<h4 id="amountCheck" class="">Amount: <span id="amountRecip"></span></h4>
 	</div>
+</div>
 </div>

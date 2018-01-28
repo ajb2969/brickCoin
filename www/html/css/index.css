@@ -17,6 +17,14 @@
 
 .dashBtn{
   position: absolute;
-  left: 70%;
+  left: 50%;
   bottom: 0;
+}
+
+.faq{
+	margin-top: 5%;
+}
+
+.faqFirst{
+	margin-top: 2%;
 }

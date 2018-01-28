@@ -52,6 +52,20 @@ class brickCoin_model extends CI_Model {
             return $this->db->get()->result_array();   
         }
 
+        public function addFunds($data){
+            //get money from reciever
+            $this->db->select('amount');
+            $this->db->from('user');
+            $this->db->where('walletID', $data['wallet']);
+            $senderOld = $this->db->get()->result_array();
+            $senderOld = $senderOld[0]['amount'];
+            //remove money from sender
+            $senderNew =  $senderOld + $data['amount'];
+            //update sender.
+            $this->db->where('walletID', $data['wallet']);
+            $this->db->update('user', array('amount' => $senderNew));
+        }
+
         public function sendTransaction($data){
             //get money from sender
             $this->db->select('amount');

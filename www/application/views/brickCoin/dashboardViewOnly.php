@@ -48,6 +48,7 @@
 				<div class="col dashBtn">
 				<button class="btn btn-default" onclick="pay()">Pay</button>
 				<button class="btn btn-default" onclick="trade()">Trade</button>
+				<button class="btn btn-default" onclick="add()">Add Funds</button>
 				</div>	
 			</div>
 		</div>

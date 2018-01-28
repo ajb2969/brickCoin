@@ -24,6 +24,14 @@ class brickCoin extends CI_Controller {
 		$this->load->view('includes/footer.php');
 	}
 
+	public function team(){
+		return $this->load->view('brickCoin/team.php');
+	}
+
+	public function faq(){
+		return $this->load->view('brickCoin/faq.php');
+	}
+
 	public function loginCheck(){
 		$post = $this->input->post();
 		$check = $this->brickCoin_model->login($post);
@@ -77,6 +85,14 @@ class brickCoin extends CI_Controller {
 		//get alll from the user table
 	}
 
+	public function addView(){
+		$post = $this->input->post();
+		$wallet = base64_decode($post['id']);
+		$data['curr'] = $this->brickCoin_model->getUserData($wallet);
+		$view = $this->load->view('brickCoin/addView.php',$data);
+		return $view;
+	}
+
 	public function reloadDashboard($wallet){
 		$userData['user'] = $this->brickCoin_model->getUserData($wallet);
 		$this->load->view('brickCoin/dashboardViewOnly.php',$userData);
@@ -89,5 +105,11 @@ class brickCoin extends CI_Controller {
 		$view['info'] = $this->brickCoin_model->getUserData($post['from']);
 		$view['view'] = $this->reloadDashboard($post['from']);
 		return $view;
+	}
+
+	public function addFunds(){
+		$post = $this->input->post();
+		$this->brickCoin_model->addFunds($post);
+		return $this->reloadDashboard($post['wallet']);
 	}
 }

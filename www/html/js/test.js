@@ -1,6 +1,5 @@
 console.log("this is a test");
 var currviewBefore;
-
 function login(){
 	//get login information
 	var username = $('#username').val();
@@ -74,6 +73,23 @@ function trade(){
 	});
 }
 
+function add(){
+	currviewBefore = $('#dashboardView').html();
+	$('#dashboardView').fadeOut(200);
+	var vars = getUrlVars();
+	vars.id =  vars.id.replace("#","");
+	console.log(vars);
+	$.ajax({
+		'type':'POST',
+		'url': 'addView',
+		'data': {'id': vars.id},
+		success: function(data){
+			$('#dashboardView').html(data);
+			$('#dashboardView').fadeIn(200);
+		}
+	});
+}
+
 function cancel(){
 	$('#dashboardView').fadeOut(200);
 	setTimeout(function(){
@@ -138,4 +154,52 @@ function checkSend(user){
 			}
 		});
 	}
+}
+
+function team(){
+	$('#dashboardView').fadeOut(200);
+	$.ajax({
+			'type': 'POST',
+			'url': 'team',
+			success : function(data){
+				console.log('grabbed team view.');
+				$('#dashboardView').html(data);
+				$('#dashboardView').fadeIn(200);
+			}
+		});
+}
+
+function dashHome(){
+	location.reload();
+}
+
+function faq() {
+	$('#dashboardView').fadeOut(200);
+	$.ajax({
+			'type': 'POST',
+			'url': 'faq',
+			success : function(data){
+				console.log('grabbed faq view.');
+				$('#dashboardView').html(data);
+				$('#dashboardView').fadeIn(200);
+			}
+		});
+}
+
+function addFunds(wallet){
+	var amount = $('#amount').val();
+	$('#dashboardView').fadeOut(200);
+	$.ajax({
+		'type': 'POST',
+		'url': 'addFunds',
+		'data':{
+			'amount':amount,
+			'wallet': wallet.walletID
+		},
+		success : function(data){
+			$('#dashboardView').html(data);
+			$('#updateAmount').html($('#userBalance').html());
+			$('#dashboardView').fadeIn(200);
+		}
+	});
 }

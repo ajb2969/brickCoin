@@ -12,13 +12,13 @@
     <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Dashboard<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#" onclick="dashHome()">Dashboard<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Team</a>
+                <a class="nav-link" href="#" onclick="team()">Team</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">FAQ</a>
+                <a class="nav-link" href="#" onclick="faq()">FAQ</a>
             </li>
         </ul>
         <span class="navbar-text white-text">
@@ -77,6 +77,7 @@
 				<div class="col dashBtn">
 				<button class="btn btn-default" onclick="pay()">Pay</button>
 				<button class="btn btn-default" onclick="trade()">Trade</button>
+				<button class="btn btn-default" onclick="add()">Add Funds</button>
 				</div>	
 			</div>
 		</div>
