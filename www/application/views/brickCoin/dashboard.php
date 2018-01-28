@@ -63,14 +63,15 @@
 				</div>
 				<div class="col-8"><h2>Last Transaction: - Filler Text -</h2></div>
 			</div>
-			<div class="row">
-				<div class="col"><code>walletID: <?php echo $user['walletID']; ?></code></div>
-			</div>
+			
 			<div class="row">
 				<div style="width: 50px;"></div>
 				<div class="col">
 					<img src="https://api.qrserver.com/v1/create-qr-code/?data=<?php echo $user['walletID']; ?>&amp;size=300x300" alt="" title="" />
 				</div>
+			</div>
+			<div class="row">
+				<div class="col-6 text-center"><code><?php echo $user['walletID']; ?></code></div>
 			</div>
 			<div class="row">
 				<div class="col-8"></div>

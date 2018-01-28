@@ -8,7 +8,7 @@
 		    <h2 class="text-center">Trading</h2>
 		    <div class="md-form">
 		        <div class="btn-group">
-    	<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Recipient</button>
+    	<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 4em; width: 20em;">Select Recipient</button>
 		    <div class="dropdown-menu">
 		   		<?php
 					foreach ($users as $user){

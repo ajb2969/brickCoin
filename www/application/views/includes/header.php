@@ -10,8 +10,9 @@ $favicon = base_url('img/favicon.png')
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>BrickCoin</title>
-      <link rel="shortcut icon" href="<?=$favicon?>" />
+     <link rel="shortcut icon" href="<?=$favicon?>" />
 	<link rel="stylesheet" type="text/css" href="<?=$style?>">
 	<link rel="stylesheet" type="text/css" href="<?=$style2?>">
 	<link rel="stylesheet" type="text/css" href="<?=$style3?>">
