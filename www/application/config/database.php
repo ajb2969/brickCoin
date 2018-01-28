@@ -77,7 +77,7 @@ $db['default'] = array(
 	'hostname' => '35.196.111.204',
 	'username' => 'root',
 	'password' => 'brickbois',
-	'database' => 'test',
+	'database' => 'brickDB',
 	'dbdriver' => 'mysqli',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),

@@ -12,6 +12,22 @@ class brickCoin_model extends CI_Model {
         	$this->db->from('test');
         	return $this->db->get()->result_array();
         }
+
+        public function login($data){
+            $this->db->select('walletID');
+            $this->db->from('user');
+            $this->db->where('username',$data['username']);
+            $this->db->where('password',$data['pass']);
+            $result = $this->db->get()->result_array();
+            return $result;
+        }
+
+        public function getUserData($wallet){
+            $this->db->select('*');
+            $this->db->from('user');
+            $this->db->where('walletID',$wallet);
+            return $this->db->get()->result_array();
+        }
 }
 
 ?>
