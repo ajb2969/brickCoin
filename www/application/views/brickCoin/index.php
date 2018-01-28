@@ -5,6 +5,23 @@ index.php
 ?>
 <div class="container" >
 	<!-- Intro -->
+	<nav class="navbar navbar-expand-lg navbar-dark special-color">
+	<div class="container">
+    <a class="navbar-brand" href="#">BrickCoin</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            
+        </ul>
+        <span class="navbar-text white-text">
+            Welcome. <a href="login/">Log in / Sign up</a>
+        </span>
+    </div>
+	</div>
+	</nav>
     <div class="row space" style="padding-top:7.5%;">
 <!--
 			<div class="col">

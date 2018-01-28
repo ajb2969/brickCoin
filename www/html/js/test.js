@@ -5,9 +5,10 @@ function login(){
 	var username = $('#username').val();
 	var password = $('#password').val();
 	//ajax to hit db.
+	console.log(username + password);
 	$.ajax({
 		'type':'POST',
-		'url': 'loginCheck',
+		'url': '../loginCheck',
 		'data':{
 			'username':username,
 			'pass': password
@@ -78,6 +79,7 @@ function add(){
 	$('#dashboardView').fadeOut(200);
 	var vars = getUrlVars();
 	vars.id =  vars.id.replace("#","");
+	vars.id = vars.id.replace("!","");
 	console.log(vars);
 	$.ajax({
 		'type':'POST',

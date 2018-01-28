@@ -6,8 +6,8 @@
 			<div class="card card-cascade wider reverse my-4">
 			    <!--Card image-->
 			    <div class="view overlay hm-white-slight">
-			        <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg" class="img-fluid">
-			        <a href="#!">
+			        <img src="<?php echo base_url('img/big-logo.png');?>" class="img-fluid container">
+			        <a href="#">
 			            <div class="mask"></div>
 			        </a>
 			    </div>
@@ -16,10 +16,10 @@
 			    <!--Card content-->
 			    <div class="card-body text-center">
 			        <!--Title-->
-			        <h4 class="card-title"><strong>My adventure</strong></h4>
-			        <h5 class="indigo-text"><strong>Photography</strong></h5>
+			        <h4 class="card-title"><strong>BrickCoin Update</strong></h4>
+			        <h5 class="indigo-text"><strong>1.28.18</strong></h5>
 
-			        <p class="card-text">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam. 
+			        <p class="card-text">It's 4am and we're still going weak. Kev Dev realized his github was never set up correctly. 
 			        </p> 
 
 			    </div>
