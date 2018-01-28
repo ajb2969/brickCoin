@@ -23,19 +23,60 @@
             </li>
         </ul>
         <span class="navbar-text white-text">
-            Welcome, <span><?php echo $user['username']?>. &emsp; Wallet: <?php echo $user['amount']; ?></span>
+            Welcome, <span><?php echo $user['username']?>. &emsp; Wallet: $<?php echo number_format($user['amount'],2); ?></span>
         </span>
     </div>
 	</div>
 </nav>
 
 
-<div class="container">
+<div class="container dashboardSpace card" id="dashboardView">
+	<div class="row">
+		<div class="col-3">
+			<div class="card card-cascade wider reverse my-4">
+			    <!--Card image-->
+			    <div class="view overlay hm-white-slight">
+			        <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg" class="img-fluid">
+			        <a href="#!">
+			            <div class="mask"></div>
+			        </a>
+			    </div>
+			    <!--/Card image-->
 
-	dataaa
-	<?php
-	print_r($user);
-	?>
+			    <!--Card content-->
+			    <div class="card-body text-center">
+			        <!--Title-->
+			        <h4 class="card-title"><strong>My adventure</strong></h4>
+			        <h5 class="indigo-text"><strong>Photography</strong></h5>
+
+			        <p class="card-text">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+			        </p>
+
+			    </div>
+			    <!--/.Card content-->
+			</div>
+			<!--/.Card-->
+		</div>
+		<div class="col">
+			<div class="row">
+				<div class="col">
+				 <h2>Balance: $<?php echo number_format($user['amount'],2); ?></h2>
+				</div>
+				<div class="col-8"><h2>Last Transaction: - Filler Text -</h2></div>
+			</div>
+			<div class="row">
+				<div class="col"><code>walletID: <?php echo $user['walletID']; ?></code></div>
+			</div>
+			<div class="row">
+				<div class="col-8"></div>
+				<div class="col dashBtn">
+				<button class="btn btn-default" onclick="pay()">Pay</button>
+				<button class="btn btn-default" onclick="trade()">Trade</button>
+				</div>	
+			</div>
+		</div>
+	</div>
+
 
 
 </div>

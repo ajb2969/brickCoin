@@ -28,6 +28,13 @@ class brickCoin_model extends CI_Model {
             $this->db->where('walletID',$wallet);
             return $this->db->get()->result_array();
         }
+
+        public function getTransactions(){
+            $this->db->select('*');
+            $this->db->from('transaction');
+            return $this->db->get()->result_array();   
+        }
+
 }
 
 ?>

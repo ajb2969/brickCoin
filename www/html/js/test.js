@@ -32,3 +32,26 @@ function login(){
 	});
 }
 
+function getUrlVars() {
+	var vars = {};
+	var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+	vars[key] = value;
+	});
+	return vars;
+}
+
+
+function trade(){
+	var currView = $('#dashboardView').html();
+	$('#dashboardView').fadeOut(200);
+	var vars = getUrlVars();
+	$.ajax({
+		'type':'POST',
+		'url': 'tradeView',
+		'data': {'id': vars.id},
+		success: function(data){
+			console.log(data);
+		}
+	});
+}
+

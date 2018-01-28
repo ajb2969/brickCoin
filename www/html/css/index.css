@@ -45,6 +45,17 @@
   padding-top: 15%;
 }
 
+.dashboardSpace{
+  margin-top: 5%;
+  padding: 1%;
+}
+
 .font_right{
   text-align: right;
+}
+
+.dashBtn{
+  position: absolute;
+  left: 70%;
+  bottom: 0;
 }
