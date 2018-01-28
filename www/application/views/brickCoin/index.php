@@ -16,7 +16,7 @@ index.php
             
         </ul>
         <span class="navbar-text white-text">
-            Welcome. <a href="login/">Log in / Sign up</a>
+            Welcome. &emsp;<a href="login">Log in / Sign up</a>
         </span>
     </div>
 	</div>
@@ -38,7 +38,7 @@ index.php
 
 		</div>
 		<div class="col">
-			<h1 class="h1-responsive">BrickCoin - a decentralized coin designed for universities.</h1>
+			<h1 class="h1-responsive">BrickCoin - an efficient digital currency designed for universities.</h1>
 		</div>
 	</div>
 

@@ -27,7 +27,8 @@ class brickCoin_model extends CI_Model {
                 'walletID' => $data['walletID'], 
                 'username' => $data['username'],
                 'password' => $data['pass'],
-                'amount' => 10
+                'amount' => 10,
+                'phoneNumber' => '5555555555'
             );
             $this->db->insert('user',$array);
         }

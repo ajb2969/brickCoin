@@ -5,7 +5,7 @@
 	<div class="col">
 	<!-- Form -->
 		<div class="form">
-		    <h2 class="text-center">Trading</h2>
+		    <h2 class="text-center">Sending</h2>
 		    <div class="md-form">
 		        <div class="btn-group">
     	<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 4em; width: 20em;">Select Recipient</button>
@@ -40,7 +40,7 @@
 	<div class="col-5">
 		<h3>Recipient</h3>
 		<hr/>
-		<p>To: <span id="toRecip"></span> &emsp; Phone: <span id="phoneRecip"></span></p>
+		<p>To: <span id="toRecip"></span> &emsp;&emsp;&emsp;&emsp; Phone: <span id="phoneRecip"></span></p>
 		<p><code>walletID: <span id="walletRecip"></span></code></p>
 		<h4 id="amountCheck" class="">Amount: <span id="amountRecip"></span></h4>
 	</div>

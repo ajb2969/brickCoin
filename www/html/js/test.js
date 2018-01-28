@@ -1,12 +1,22 @@
 console.log("this is a test");
 var currviewBefore;
 function login(){
+	$('#loaderWheel').show(); 
 	//get login information
 	var username = $('#username').val();
 	var password = $('#password').val();
 	//ajax to hit db.
-	console.log(username + password);
-	$.ajax({
+	var errors = []
+	if (username == '') {
+		errors.push('username');
+	}
+	if (password == '') {
+		errors.push('password');
+	}
+	console.log(errors);
+	if (errors.length <= 0){
+		console.log('here');
+		$.ajax({
 		'type':'POST',
 		'url': '../loginCheck',
 		'data':{
@@ -22,12 +32,24 @@ function login(){
 				window.location.href = curr;
 			}
 		}
-	});
+		});
+	}
+	else{
+		$('#errors').html("");
+		$.each(errors,function(index,val){
+			$('#errors').append(val + " ");
+		});
+		$('#errorModal').modal('show');
+		$('#loaderWheel').hide(); 
+	}
+	
+
 }
 
 
 function create(){
 	//get login information
+	$('#loaderWheel').show();
 	var username = $('#username').val();
 	var password = $('#password').val();
 	//ajax to hit db.
@@ -45,6 +67,7 @@ function create(){
 				curr = curr.replace('login','loadDashboard?id='+data);
 				console.log(curr);
 				window.location.href = curr;
+
 			}
 		}
 	});
@@ -60,6 +83,7 @@ function getUrlVars() {
 
 
 function trade(){
+	$('#loaderWheel').show();
 	currviewBefore = $('#dashboardView').html();
 	$('#dashboardView').fadeOut(200);
 	var vars = getUrlVars();
@@ -70,11 +94,13 @@ function trade(){
 		success: function(data){
 			$('#dashboardView').html(data);
 			$('#dashboardView').fadeIn(200);
+			$('#loaderWheel').hide();
 		}
 	});
 }
 
 function add(){
+	$('#loaderWheel').show();
 	currviewBefore = $('#dashboardView').html();
 	$('#dashboardView').fadeOut(200);
 	var vars = getUrlVars();
@@ -88,6 +114,7 @@ function add(){
 		success: function(data){
 			$('#dashboardView').html(data);
 			$('#dashboardView').fadeIn(200);
+			$('#loaderWheel').hide();
 		}
 	});
 }
@@ -105,6 +132,10 @@ function populateRecip(user){
 	$('#toRecip').html(user.username);
 	$('#walletRecip').html(user.walletID);
 	$('#phoneRecip').html(user.phoneNumber);
+	$("#phoneRecip").text(function(i, text) {
+        text = text.replace(/(\d{3})(\d{3})(\d{4})/, "($1)-$2-$3");
+        return text;
+    });
 }
 
 
@@ -138,6 +169,7 @@ function checkSend(user){
 	}
 	else{
 		//user is the curr user.
+		$('#loaderWheel').show();
 		console.log($('#walletRecip').html());
 		$('#dashboardView').fadeOut(200);
 		$.ajax({
@@ -153,12 +185,14 @@ function checkSend(user){
 				$('#dashboardView').html(data);
 				$('#updateAmount').html($('#userBalance').html());
 				$('#dashboardView').fadeIn(200);
+				$('#loaderWheel').hide();
 			}
 		});
 	}
 }
 
 function team(){
+	$('#loaderWheel').show();
 	$('#dashboardView').fadeOut(200);
 	$.ajax({
 			'type': 'POST',
@@ -167,6 +201,7 @@ function team(){
 				console.log('grabbed team view.');
 				$('#dashboardView').html(data);
 				$('#dashboardView').fadeIn(200);
+				$('#loaderWheel').hide();
 			}
 		});
 }
@@ -176,6 +211,7 @@ function dashHome(){
 }
 
 function faq() {
+	$('#loaderWheel').show();
 	$('#dashboardView').fadeOut(200);
 	$.ajax({
 			'type': 'POST',
@@ -184,11 +220,13 @@ function faq() {
 				console.log('grabbed faq view.');
 				$('#dashboardView').html(data);
 				$('#dashboardView').fadeIn(200);
+				$('#loaderWheel').hide();
 			}
 		});
 }
 
 function addFunds(wallet){
+	$('#loaderWheel').show();
 	var amount = $('#amount').val();
 	$('#dashboardView').fadeOut(200);
 	$.ajax({
@@ -202,6 +240,7 @@ function addFunds(wallet){
 			$('#dashboardView').html(data);
 			$('#updateAmount').html($('#userBalance').html());
 			$('#dashboardView').fadeIn(200);
+			$('#loaderWheel').hide();
 		}
 	});
 }

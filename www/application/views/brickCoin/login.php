@@ -35,8 +35,8 @@
                         </div>    
                     </div>
                     <div class="text-center">
-                        <button class="btn btn-default" onclick="login();">Login</button>
-                        <button class="btn btn-primary" onclick="create();">Create Account</button>
+                        <button class="btn btn-default" onclick="login()">Login</button>
+                        <button class="btn btn-primary" onclick="create()">Create Account</button>
                     </div>
                 </div>
 <!-- Form login -->
