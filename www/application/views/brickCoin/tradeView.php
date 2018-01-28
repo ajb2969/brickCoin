@@ -29,7 +29,10 @@
 		    </div>
 
 		    <div class="text-center">
-		        <button class="btn btn-default" onclick="checkSend(<?= json_encode($curr[0]) ?>)">Send</button>
+		    	<?php
+		    	echo "<button class='btn btn-default' onclick='checkSend(" . json_encode($curr[0]). ")'>Send</button>";
+		    	?>
+		        
 		    </div>
 		</div>
 	</div>

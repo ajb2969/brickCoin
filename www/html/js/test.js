@@ -93,6 +93,19 @@ function checkSend(user){
 		//do nothing.
 	}
 	else{
-		console.log(user);
+		//user is the curr user.
+		console.log($('#walletRecip').html());
+		$.ajax({
+			'type': 'POST',
+			'url': 'sendTransaction',
+			'data':{
+				'to' : $('#walletRecip').html(),
+				'from' : user.walletID,
+				'amount' : $('#amount').val()
+			},
+			success : function(data){
+				console.log(data);
+			}
+		});
 	}
 }

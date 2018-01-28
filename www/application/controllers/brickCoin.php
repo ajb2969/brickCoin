@@ -57,4 +57,9 @@ class brickCoin extends CI_Controller {
 
 		//get alll from the user table
 	}
+
+	public function sendTransaction(){
+		$post = $this->input->post();
+		echo $this->brickCoin_model->sendTransaction($post);
+	}
 }
