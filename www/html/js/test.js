@@ -50,8 +50,49 @@ function trade(){
 		'url': 'tradeView',
 		'data': {'id': vars.id},
 		success: function(data){
-			console.log(data);
+			$('#dashboardView').html(data);
+			$('#dashboardView').fadeIn(200);
 		}
 	});
 }
 
+function populateRecip(user){
+	console.log(user);
+	$('#toRecip').html(user.username);
+	$('#walletRecip').html(user.walletID);
+	$('#phoneRecip').html(user.phoneNumber);
+}
+
+
+function isNumber(evt)
+ {
+ var charCode = (evt.which) ? evt.which : event.keyCode
+ if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode != 46)
+    return false;
+ return true;
+ }
+
+function checker(wallet){
+	var request = $('#amount').val();
+	$('#amountRecip').html(request);
+	if (request > wallet) {
+		console.log('yes');
+		$('#amountCheck').addClass('red-text');
+	}
+	else if (request.indexOf(".") != request.lastIndexOf(".")) {
+		$('#amountCheck').addClass('red-text');
+	}
+	else{
+		console.log('no');
+		$('#amountCheck').removeClass('red-text');
+	}
+}
+
+function checkSend(user){
+	if ($('#amountCheck').hasClass('red-text')) {
+		//do nothing.
+	}
+	else{
+		console.log(user);
+	}
+}

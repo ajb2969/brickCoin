@@ -29,11 +29,18 @@ class brickCoin_model extends CI_Model {
             return $this->db->get()->result_array();
         }
 
+        public function getAllUsers(){
+            $this->db->select('amount,walletID,username,phoneNumber');
+            $this->db->from('user');
+            return $this->db->get()->result_array();   
+        }
+
         public function getTransactions(){
             $this->db->select('*');
             $this->db->from('transaction');
             return $this->db->get()->result_array();   
         }
+
 
 }
 

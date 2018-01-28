@@ -50,7 +50,11 @@ class brickCoin extends CI_Controller {
 	public function tradeView(){
 		$post = $this->input->post();
 		$wallet = base64_decode($post['id']);
-		echo $wallet;
+		$data['users'] = $this->brickCoin_model->getAllUsers();
+		$data['curr'] = $this->brickCoin_model->getUserData($wallet);
+		$view = $this->load->view('brickCoin/tradeView.php',$data);
+		return $view;
+
 		//get alll from the user table
 	}
 }

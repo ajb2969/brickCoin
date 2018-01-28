@@ -2,7 +2,6 @@
 	$user = $user[0];
 ?>
 
-
 <nav class="navbar navbar-expand-lg navbar-dark special-color">
 	<div class="container">
     <a class="navbar-brand" href="#">BrickCoin</a>
@@ -49,8 +48,8 @@
 			        <h4 class="card-title"><strong>My adventure</strong></h4>
 			        <h5 class="indigo-text"><strong>Photography</strong></h5>
 
-			        <p class="card-text">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
-			        </p>
+			        <p class="card-text">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam. 
+			        </p> 
 
 			    </div>
 			    <!--/.Card content-->
@@ -66,6 +65,13 @@
 			</div>
 			<div class="row">
 				<div class="col"><code>walletID: <?php echo $user['walletID']; ?></code></div>
+			</div>
+			<div class="row">
+				<div style="width: 50px;"></div>
+				<div class="col">
+					<div style="margin-top:1em; width: 300px; height: 300px; background-color: black;">
+					</div>
+				</div>
 			</div>
 			<div class="row">
 				<div class="col-8"></div>
