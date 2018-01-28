@@ -35,6 +35,25 @@ class brickCoin extends CI_Controller {
 		}
 	}
 
+	public function walletCreator(){
+		//create unique 45 character hash
+		$charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+		$charLength = strlen($charset);
+		$randomString = "";
+		for ($i=0; $i < 42; $i++) { 
+			$randomString .= $charset[rand(0,$charLength-1)];
+		}
+		return $randomString;
+	}
+
+	public function loginCreate(){
+		$post = $this->input->post();
+		$post['walletID'] = $this->walletCreator();
+		$create = $this->brickCoin_model->createAcc($post);
+		//account is created.
+		echo base64_encode($post['walletID']);
+	}
+
 	public function loadDashboard(){
 		//decrypt id
 		$get = $this->input->get();
@@ -65,7 +84,7 @@ class brickCoin extends CI_Controller {
 
 	public function sendTransaction(){
 		$post = $this->input->post();
-		$this->brickCoin_model->sendTransaction($post);
+		$view['date'] = $this->brickCoin_model->sendTransaction($post);
 		//transaction completed. send back to og view.
 		$view['info'] = $this->brickCoin_model->getUserData($post['from']);
 		$view['view'] = $this->reloadDashboard($post['from']);

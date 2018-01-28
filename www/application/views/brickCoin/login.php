@@ -4,7 +4,7 @@
 		<div class="col"></div>
 		<div class="col-6">
 			<!-- Could be a card -->
-<div class="form card">
+<div class="form">
     <p class="h5 text-center mb-4">Sign in</p>
 
     <div class="md-form">
@@ -21,6 +21,7 @@
 
     <div class="text-center">
         <button class="btn btn-default" onclick="login();">Login</button>
+        <button class="btn btn-primary" onclick="create();">Create Account</button>
     </div>
 </div>
 <!-- Form login -->

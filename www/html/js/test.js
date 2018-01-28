@@ -25,6 +25,31 @@ function login(){
 	});
 }
 
+
+function create(){
+	//get login information
+	var username = $('#username').val();
+	var password = $('#password').val();
+	//ajax to hit db.
+	$.ajax({
+		'type':'POST',
+		'url': 'loginCreate',
+		'data':{
+			'username':username,
+			'pass': password
+		},
+		success: function(data){
+			console.log(data);
+			if (data != "1") {
+				var curr = window.location.href+ "";
+				curr = curr.replace('login','loadDashboard?id='+data);
+				console.log(curr);
+				window.location.href = curr;
+			}
+		}
+	});
+}
+
 function getUrlVars() {
 	var vars = {};
 	var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
@@ -106,6 +131,7 @@ function checkSend(user){
 				'amount' : $('#amount').val()
 			},
 			success : function(data){
+				console.log(data);
 				$('#dashboardView').html(data);
 				$('#updateAmount').html($('#userBalance').html());
 				$('#dashboardView').fadeIn(200);

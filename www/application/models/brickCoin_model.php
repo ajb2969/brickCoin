@@ -22,6 +22,17 @@ class brickCoin_model extends CI_Model {
             return $result;
         }
 
+        public function createAcc($data){
+            $array = array(
+                'walletID' => $data['walletID'], 
+                'username' => $data['username'],
+                'password' => $data['pass'],
+                'amount' => 10
+            );
+            $this->db->insert('user',$array);
+        }
+
+
         public function getUserData($wallet){
             $this->db->select('*');
             $this->db->from('user');
@@ -76,6 +87,7 @@ class brickCoin_model extends CI_Model {
                 'comment' => ""
             );
             $this->db->insert('transaction',$insert);
+            return $date;
         }
 
 
