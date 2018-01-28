@@ -3,56 +3,70 @@
 index.php
 */
 ?>
-<div class="container space">
+<div class="container" >
 	<!-- Intro -->
-	<div class="row">
+    <div class="row space" style="padding-top:7.5%;">
+<!--
+			<div class="col">
+			</div>
+			<div class="col-5 font_right">
+				<a href="login">Log in bb</a>
+			</div>
+-->
+    </div>
+	<div class="row" style="padding-top:7.5%;">
 		<div class="col">
-			<h2></h2>
+            <img src="<?php echo base_url('img/big-logo.png');?>" width="400px"/>
+
 		</div>
 		<div class="col">
-			<h1 class="h1-responsive">BrickCoin - a decentralized coin designed for univsersities.</h1>
+			<h1 class="h1-responsive">BrickCoin - a decentralized coin designed for universities.</h1>
 		</div>
 	</div>
 
 	<!-- Benefits -->
 	<div class="benefits">
-		<div class="row">
+		<div class="row" style="padding-bottom:7.5%;">
 			<div class="col-5">
 				<h2>Get rid of paper recipts and get ready for secure transactions.</h2>
 				<br/>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin arcu nibh, at eleifend neque porta eget. Praesent faucibus vulputate consequat. Aliquam feugiat mauris at libero convallis facilisis. Cras luctus, odio sit amet tristique varius, erat justo finibus elit, eu rutrum turpis arcu vitae elit. Curabitur finibus bibendum libero in pulvinar. Aliquam euismod, ligula ut blandit scelerisque, eros quam euismod risus, vel ultricies eros enim eget ligula. Cras ultricies massa metus, rhoncus sodales lorem bibendum vehicula. Pellentesque elementum tristique justo. Aenean ut leo tincidunt urna porta sollicitudin.</p>
+				<p>
+                    Our blockchain application scrapes transactions every 60 seconds. Allowing for secure transaction validation, and permanent digital receipt storage. Meaning more paper in your pocket and less in a landfill.</p>
 			</div>
-			<div class="col">
-			</div>
-		</div>
-		<div class="row space">
-			<div class="col">
-			</div>
-			<div class="col-5 font_right">
-				<h2>Get rid of paper recipts and get ready for secure transactions.</h2>
-				<br/>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin arcu nibh, at eleifend neque porta eget. Praesent faucibus vulputate consequat. Aliquam feugiat mauris at libero convallis facilisis. Cras luctus, odio sit amet tristique varius, erat justo finibus elit, eu rutrum turpis arcu vitae elit. Curabitur finibus bibendum libero in pulvinar. Aliquam euismod, ligula ut blandit scelerisque, eros quam euismod risus, vel ultricies eros enim eget ligula. Cras ultricies massa metus, rhoncus sodales lorem bibendum vehicula. Pellentesque elementum tristique justo. Aenean ut leo tincidunt urna porta sollicitudin.</p>
-			</div>
-		</div>
-		<div class="row space">
+            <div class="col-2"></div>
 			<div class="col-5">
-				<h2>Get rid of paper recipts and get ready for secure transactions.</h2>
-				<br/>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin arcu nibh, at eleifend neque porta eget. Praesent faucibus vulputate consequat. Aliquam feugiat mauris at libero convallis facilisis. Cras luctus, odio sit amet tristique varius, erat justo finibus elit, eu rutrum turpis arcu vitae elit. Curabitur finibus bibendum libero in pulvinar. Aliquam euismod, ligula ut blandit scelerisque, eros quam euismod risus, vel ultricies eros enim eget ligula. Cras ultricies massa metus, rhoncus sodales lorem bibendum vehicula. Pellentesque elementum tristique justo. Aenean ut leo tincidunt urna porta sollicitudin.</p>
-			</div>
-			<div class="col">
+                <img src="<?php echo base_url('img/img1.jpg');?>" width="500px"/>
 			</div>
 		</div>
-		<div class="row space">
-			<div class="col">
+        <hr/>
+		<div class="row" style="padding-top:7.5%; padding-bottom:7.5%;">
+			<div class="col-5">
+                <img src="<?php echo base_url('img/img2.jpg');?>" width="500px"/>
 			</div>
+            <div class="col-2"></div>
 			<div class="col-5 font_right">
-				<h2>Get rid of paper recipts and get ready for secure transactions.</h2>
+				<h2>Peer-to-Peer transactions between users.</h2>
 				<br/>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin arcu nibh, at eleifend neque porta eget. Praesent faucibus vulputate consequat. Aliquam feugiat mauris at libero convallis facilisis. Cras luctus, odio sit amet tristique varius, erat justo finibus elit, eu rutrum turpis arcu vitae elit. Curabitur finibus bibendum libero in pulvinar. Aliquam euismod, ligula ut blandit scelerisque, eros quam euismod risus, vel ultricies eros enim eget ligula. Cras ultricies massa metus, rhoncus sodales lorem bibendum vehicula. Pellentesque elementum tristique justo. Aenean ut leo tincidunt urna porta sollicitudin.</p>
-				<a href="login">Log in bb</a>
+				<p>
+                    The current university currency does not allow for trading between users. This is solved by Brick Coin's easy to access, flexible user interface that allows an individuals wallet to be discovered by other users using a readable username rather than a 42 digit alphanumeric walletID.
+                </p>
 			</div>
 		</div>
+        <hr/>
+		<div class="row" style="padding-top:7.5%; padding-bottom: 2em;">
+			<div class="col-5">
+				<h2>Low operating cost for users. Passive revenue for distributer.</h2>
+				<br/>
+				<p>
+                    Each Brick Coin transaction operates with a fee of $0.005 for a transaction of any size. If you trade $1 or $100 dollars you'll always pay half a penny. This low cost fee wouldn't be noticable to the average user and allows the university to stockpile Brick Coin for future events such as raffles or giveaways.
+               </p>
+			</div>
+            <div class="col-2"></div>
+			<div class="col-5">
+                <img src="<?php echo base_url('img/img3.jpg');?>" width="500px"/>
+			</div>
+		</div>
+
 	</div>
 
 </div>
